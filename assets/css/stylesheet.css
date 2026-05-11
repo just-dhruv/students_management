@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #ed1d26;
+    --secondary-color: #2d2f93;
+    --text-color: #000;
+    --border-color: #ccc;
+    --radius: 4px;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+a{
+    text-decoration:none;
+    color: var(--text-color);
+}
+a:hover{
+    text-decoration:none;
+}
+
+/* FIX CLASSES */
+.mt-80{
+    margin-top: 80px;
+}
+.mb-80{
+    margin-bottom: 80px;
+}
+.pt-80{
+    padding-top: 80px;
+}
+.pb-80{
+    padding-bottom: 80px;
+}
+/* INPUT DESIGN */
+input {
+    border: none;
+    border-bottom:1px solid var(--border-color);
+    width: 100%;
+}
+
+.input-block {
+    margin-bottom: 20px;
+}
+
+.input-block label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.input-block input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    transition: all 0.4s;
+}
+
+.input-block input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.input-block input:hover {
+    border-color: #000;
+}
+
+.main-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: var(--radius);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.checkbox-btn {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+/* STUDENTS */
+.students-list{
+    margin: 20px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.students-list td,
+.students-list th{
+    border: 1px solid var(--border-color);
+    padding:10px;
+}
