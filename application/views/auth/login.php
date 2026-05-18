@@ -6,13 +6,16 @@
 
             <?php if ($this->session->flashdata('login_error')): ?>
                 <div class="alert alert-danger text-center">
-                    <?=  $this->session->flashdata('login_error'); ?>
+                    <?= $this->session->flashdata('login_error'); ?>
                 </div>
             <?php endif; ?>
 
-            <?= validation_errors('<div class="alert alert-danger text-center">','</div>') ?>
+            <?= validation_errors('<div class="alert alert-danger text-center">', '</div>') ?>
 
             <form action="<?= site_url('login/authenticate') ?>" method="POST">
+                <input type="hidden"
+                    name="<?= $this->security->get_csrf_token_name(); ?>"
+                    value="<?= $this->security->get_csrf_hash(); ?>">
                 <div class="input-block mb-3 d-block">
                     <label for="username" class="form-label">Username</label>
                     <input
@@ -20,8 +23,7 @@
                         name="username"
                         id="username"
                         value="<?= set_value('username') ?>"
-                        placeholder="Enter username"
-                        class="form-control">
+                        placeholder="Enter username">
                 </div>
 
                 <div class="input-block mb-3 d-block">
@@ -30,8 +32,7 @@
                         type="password"
                         name="password"
                         id="password"
-                        placeholder="Enter password"
-                        class="form-control">
+                        placeholder="Enter password">
                 </div>
 
                 <div class="mb-4 d-flex align-items-center justify-content-between">
@@ -43,12 +44,14 @@
                     <a href="#" class="text-primary fw-semibold text-decoration-none">Forgot password</a>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100 main-btn">Sign In</button>
+                <div class="main-btn">
+                    <button type="submit" class="sm-btn">Sign In</button>
+                </div>
             </form>
 
             <div class="mt-4 text-center">
                 <p class="text-secondary">
-                    Don't have an account?
+                    Don't have an account?x
                     <a href="#" class="text-primary fw-semibold text-decoration-none">Sign up here</a>
                 </p>
             </div>

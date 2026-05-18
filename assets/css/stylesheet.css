@@ -1,83 +1,84 @@
 :root {
-    --primary-color: #ed1d26;
-    --secondary-color: #2d2f93;
+    --p-color: #ed1d26;
+    --p-color-light: #F14A51;
+    --p-color-extra-light: #F4777D;
+    --s-color: #2d2f93;
+    --s-color-light: #5557A8;
+    --s-color-extra-light: #BABADD;
     --text-color: #000;
     --border-color: #ccc;
-    --radius: 4px;
+    --radius-4: 4px;
+    --radius-18: 18px;
+    --background-color: #f8f9fa;
+    --text-white: #fff;
+    --transition: all 0.3s;
+    --font-size: 4px;
 }
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Playwrite DE Grund", cursive;
+    /* font-family: Playwrite DE Grund, cursive, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-weight: 400;
-    font-size: 16px;
+    font-size: calc(3.2 * var(--font-size));
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
     color: var(--text-color);
 }
 
-a{
-    text-decoration:none;
-    color: var(--text-color);
-}
-a:hover{
-    text-decoration:none;
+a:hover {
+    text-decoration: none;
 }
 
 /* FIX CLASSES */
-.mt-80{
+.mt-80 {
     margin-top: 80px;
 }
-.mb-80{
+
+.mb-80 {
     margin-bottom: 80px;
 }
-.pt-80{
+
+.pt-80 {
     padding-top: 80px;
 }
-.pb-80{
+
+.pb-80 {
     padding-bottom: 80px;
 }
+
 /* INPUT DESIGN */
 input {
     border: none;
-    border-bottom:1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     width: 100%;
+    width: 100%;
+    padding: 10px 16px 10px 0;
+    transition: all 0.3s;
+    font-size: calc(2.6 * var(--font-size));
+    background-color: var(--background-color);
+}
+.input-block input:focus {
+    outline: none;
+    border-color: var(--p-color);
+}
+
+.input-block input:hover {
+    border-color: var(--p-color);
 }
 
 .input-block {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .input-block label {
     display: block;
     font-weight: 700;
     margin-bottom: 5px;
-}
-
-.input-block input {
-    width: 100%;
-    padding: 10px 16px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    transition: all 0.4s;
-}
-
-.input-block input:focus {
-    outline: none;
-    border-color: #000;
-}
-
-.input-block input:hover {
-    border-color: #000;
-}
-
-.main-btn {
-    padding: 5px 10px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    border-radius: var(--radius);
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    width: fit-content;
+    font-size: calc(2.8 * var(--font-size));
 }
 
 .checkbox-btn {
@@ -87,14 +88,32 @@ input {
 }
 
 /* STUDENTS */
-.students-list{
+.students-list {
     margin: 20px auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .students-list td,
-.students-list th{
+.students-list th {
     border: 1px solid var(--border-color);
-    padding:10px;
+    padding: 10px;
+}
+
+/* CREATE STUDENT FORM */
+.main-form{
+    width:600px;
+    margin:auto;
+    padding:20px;
+    border-radius:var(--radius-18);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.08) 0px 0px 8px;
+}
+
+.main-title{
+    text-align: center;
+    margin-bottom:30px;
+}
+.h1{
+    font-size: calc(7 * var(--font-size));
 }

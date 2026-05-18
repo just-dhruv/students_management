@@ -1,0 +1,67 @@
+:root {
+    --p-color: #ed1d26;
+    --p-color-light: #F14A51;
+    --p-color-extra-light: #F4777D;
+    --s-color: #2d2f93;
+    --s-color-light: #5557A8;
+    --s-color-extra-light: #BABADD;
+    --text-color: #000;
+    --border-color: #ccc;
+    --radius-4: 4px;
+    --radius-18: 18px;
+    --background-color: #f8f9fa;
+    --text-white: #fff;
+    --transition: all 0.3s;
+    --font-size: 4px;
+}
+
+.sm_i-error {
+    font-size: calc(3 * var(--font-size));
+    color: red;
+    margin-top: 3px;
+}
+
+.sm_f-success {
+    font-size: calc(3 * var(--font-size));
+    color: green;
+    margin-top: 3px;
+    text-align: center;
+    padding: 5px 20px;
+    background-color: #ddffdd;
+    border-radius: var(--radius-4);
+    margin-bottom:10px;
+}
+.sm_f-delete{
+    font-size: calc(3 * var(--font-size));
+    color: red;
+    margin-top: 3px;
+    text-align: center;
+    padding: 5px 20px;
+    background-color: #ffdddd;
+    border-radius: var(--radius-4);
+    margin-bottom:10px;
+}
+/* BUTTON */
+.main-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.sm-btn {
+    text-align: center;
+    padding: 9px 24px;
+    border: none;
+    background-color: var(--p-color);
+    transition: var(--transition);
+    color: var(--text-white);
+    border-radius: 8px;
+    font-size: calc(3.2 * var(--font-size));
+}
+
+.sm-btn.gray-btn {
+    background-color: var(--s-color-extra-light);
+}
+
+.sm-btn:hover {
+    background-color: var(--s-color);
+}

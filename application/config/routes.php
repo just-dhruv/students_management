@@ -61,6 +61,14 @@ $route['login/authenticate'] = 'auth_controller/authenticate';
 
 // STUDENTS LIST
 $route['students'] = 'students_controller/index';
+$route['students/create'] = 'students_controller/create';
+$route['students/store'] = 'students_controller/store';
+// EDIT
+$route['students/edit/(:num)'] = 'students_controller/edit/$1';
+$route['students/update/(:num)'] = 'students_controller/update/$1';
+$route['students/delete/(:num)'] = 'students_controller/delete/$1';
+$route['students/view/(:num)'] = 'students_controller/view/$1';
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
